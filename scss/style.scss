@@ -15,8 +15,8 @@
 }
 
 .work-box {
+    box-shadow: $shadow-bottom;
     position: relative;
-    box-shadow: -6px 0 transparent, 6px 0 transparent, 0 30px 20px -10px darken($background-color, 10);
     transform: scale(1);
     transition: transform 300ms ease-in-out;
     &:hover{
@@ -57,5 +57,37 @@
         @include mQ($breakpoint-mobile) {
             display: none;
         }
+    }
+}
+
+#presentation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10%;
+    div {
+        flex: 2;
+        font-size: 1rem;
+        ul {
+            list-style-type: none;
+        }
+        span {
+            color: map-get($accent-colors, green);
+        }
+    }
+    img {
+        flex: 1;
+        margin-left: 20%;
+        display: inline-block;
+        max-width: 250px;
+        height: auto;
+        box-shadow: $shadow-bottom;
+        @include mQ($breakpoint-desktop){
+            margin-bottom: 80px;
+            margin-left: 0px;
+        }
+    }
+    @include mQ($breakpoint-desktop){
+        flex-direction: column-reverse;
     }
 }

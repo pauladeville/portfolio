@@ -24,3 +24,5 @@ $breakpoint-mobile: 500px;
         @content;
     }
 }
+
+$shadow-bottom: -6px 0 transparent, 6px 0 transparent, 0 30px 20px -10px darken($background-color, 10);

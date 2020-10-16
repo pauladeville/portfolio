@@ -5,6 +5,7 @@
 }
 body {
   background-color: #090F29;
+  color: #FEFEFF;
   width: 100%;
   font-family: "Roboto Mono";
   margin: 0;
@@ -31,6 +32,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2%;
 }
 @media screen and (max-width: 900px) {
   nav {
@@ -59,6 +61,7 @@ nav ul {
   grid-gap: 15px;
   list-style-type: none;
   text-align: center;
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 900px) {
   nav ul {
@@ -195,8 +198,8 @@ nav ul {
 }
 
 .work-box {
-  position: relative;
   box-shadow: -6px 0 transparent, 6px 0 transparent, 0 30px 20px -10px black;
+  position: relative;
   transform: scale(1);
   transition: transform 300ms ease-in-out;
 }
@@ -241,6 +244,42 @@ nav ul {
 @media screen and (max-width: 500px) {
   .work-box p {
     display: none;
+  }
+}
+
+#presentation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10%;
+}
+#presentation div {
+  flex: 2;
+  font-size: 1rem;
+}
+#presentation div ul {
+  list-style-type: none;
+}
+#presentation div span {
+  color: #05CE7C;
+}
+#presentation img {
+  flex: 1;
+  margin-left: 20%;
+  display: inline-block;
+  max-width: 250px;
+  height: auto;
+  box-shadow: -6px 0 transparent, 6px 0 transparent, 0 30px 20px -10px black;
+}
+@media screen and (max-width: 900px) {
+  #presentation img {
+    margin-bottom: 80px;
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 900px) {
+  #presentation {
+    flex-direction: column-reverse;
   }
 }
 

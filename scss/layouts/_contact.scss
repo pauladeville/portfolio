@@ -1,9 +1,9 @@
 #contact {
-    background: linear-gradient(6deg, #05CE7C 45%, #090F29 45%) no-repeat scroll;
+    background: linear-gradient(6deg, map-get($accent-colors, green) 45%, $background-color 45%) no-repeat scroll;
     width: 100%;
     height: 200px;
     @include mQ($breakpoint-desktop) {
-        background: linear-gradient(6deg, #05CE7C 50%, #090F29 50%) no-repeat scroll;
+        background: linear-gradient(6deg, map-get($accent-colors, green) 50%, $background-color 50%) no-repeat scroll;
     }
     div {
         position: relative;

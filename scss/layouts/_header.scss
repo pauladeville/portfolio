@@ -13,6 +13,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 2%;
     @include mQ($breakpoint-desktop){
         flex-direction: column;
     }
@@ -36,6 +37,7 @@ nav {
         grid-gap: 15px;
         list-style-type: none;
         text-align: center;
+        font-size: 1.2rem;
         @include mQ($breakpoint-desktop){
             grid-template-columns: auto;
             grid-gap: 40px;
