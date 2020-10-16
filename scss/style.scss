@@ -1,19 +1,22 @@
 @import "_variables";
 @import "_base";
+@import "layouts/header";
+@import "layouts/contact";
 
-section {
+#portfolio {
     display: grid;
     grid-template-columns: auto auto;
     grid-gap: 100px;
-    margin: 50px;
+    margin: 100px 10% 15% 10%;
     @include mQ($breakpoint-desktop){
         grid-template-columns: auto;
+        margin: 100px 80px 100px 80px;
     }
 }
 
 .work-box {
     position: relative;
-    box-shadow: -6px 0 transparent, 6px 0 transparent, 0 30px 20px -10px darken($background-color, 5);
+    box-shadow: -6px 0 transparent, 6px 0 transparent, 0 30px 20px -10px darken($background-color, 10);
     transform: scale(1);
     transition: transform 300ms ease-in-out;
     &:hover{
@@ -44,13 +47,13 @@ section {
         text-align: center;
     }
     h2 {
-        padding: auto;
+        margin-top: 5%;
         @include mQ($breakpoint-mobile) {
             font-size: 1rem;
         }
     }
     p {
-        padding: 0 15%;
+        margin: 1% 10% 10% 10%;
         @include mQ($breakpoint-mobile) {
             display: none;
         }
