@@ -1,0 +1,26 @@
+//COULEURS
+$background-color: #090F29;
+$font-color: #FEFEFF;
+$accent-colors: (
+    orange: #FF4338,
+    pink: #DA3AB3,
+    blue: #00B3E3,
+    green: #05CE7C
+);
+
+//POLICES
+@font-face {
+    font-family: "Gilbert-Color";
+    src: url("font/Gilbert-Color.otf");
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+//MEDIA QUERY
+$breakpoint-desktop: 1000px;
+$breakpoint-mobile: 500px;
+
+@mixin mQ($size) {
+    @media screen and (max-width: $size) {
+        @content;
+    }
+}
