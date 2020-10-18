@@ -186,7 +186,7 @@ nav ul {
 #portfolio {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 100px;
+  grid-gap: 80px;
   margin: 100px 10% 15% 10%;
 }
 @media screen and (max-width: 1000px) {
