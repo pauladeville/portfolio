@@ -19,6 +19,15 @@
     position: relative;
     transform: scale(1);
     transition: transform 300ms ease-in-out;
+    @include mQ($breakpoint-desktop){
+        width: 80%;
+        margin: auto;
+    }
+    @include mQ($breakpoint-mobile){
+        width: 100%;
+        margin: auto;
+    }
+
     &:hover{
         transform: scale(1.05);
     }
@@ -53,7 +62,7 @@
         }
     }
     p {
-        margin: 1% 10% 10% 10%;
+        margin: 1% 10% 5% 10%;
         @include mQ($breakpoint-mobile) {
             display: none;
         }
@@ -91,4 +100,8 @@
     @include mQ($breakpoint-desktop){
         flex-direction: column-reverse;
     }
+}
+
+.uppercase {
+    text-transform: uppercase;
 }

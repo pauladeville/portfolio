@@ -15,7 +15,8 @@ $accent-colors: (
 }
 
 //MEDIA QUERY
-$breakpoint-desktop: 900px;
+$breakpoint-desktop: 1000px;
+$breakpoint-small-screen: 700px;
 $breakpoint-mobile: 500px;
 
 @mixin mQ($size) {
