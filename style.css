@@ -25,6 +25,11 @@ header img {
   width: 200px;
   z-index: 2;
 }
+@media screen and (max-width: 1000px) {
+  header img {
+    left: 25%;
+  }
+}
 
 nav {
   width: 100%;
@@ -60,12 +65,13 @@ nav ul {
   grid-gap: 15px;
   list-style-type: none;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 @media screen and (max-width: 1000px) {
   nav ul {
     grid-template-columns: auto;
     grid-gap: 40px;
+    font-size: 1rem;
   }
 }
 
@@ -81,7 +87,7 @@ nav ul {
   height: 50px;
   right: 50%;
   left: -8px;
-  top: -20px;
+  top: -19px;
   padding: 10%;
   transform: translate(-50%, -50%);
   background-color: #FF4338;
@@ -105,7 +111,7 @@ nav ul {
   height: 50px;
   right: 50%;
   left: -8px;
-  top: -20px;
+  top: -19px;
   padding: 10%;
   transform: translate(-50%, -50%);
   background-color: #DA3AB3;
@@ -129,7 +135,7 @@ nav ul {
   height: 50px;
   right: 50%;
   left: -8px;
-  top: -20px;
+  top: -19px;
   padding: 10%;
   transform: translate(-50%, -50%);
   background-color: #FF4338;

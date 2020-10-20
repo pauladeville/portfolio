@@ -6,6 +6,9 @@ header img {
     top: -60px;
     width: 200px;
     z-index: 2;
+    @include mQ($breakpoint-desktop){
+        left: 25%;
+    }
 }
 
 nav {
@@ -37,10 +40,11 @@ nav {
         grid-gap: 15px;
         list-style-type: none;
         text-align: center;
-        font-size: 1rem;
+        font-size: 1.2rem;
         @include mQ($breakpoint-desktop){
             grid-template-columns: auto;
             grid-gap: 40px;
+            font-size: 1rem;
         }
     
     }
@@ -57,7 +61,7 @@ nav {
         height: 50px;
         right: 50%;
         left: -8px;
-        top: -20px;
+        top: -19px;
         padding: 10%;
         transform: translate(-50%, -50%);    
         background-color: $color;
