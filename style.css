@@ -16,7 +16,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 80px;
-  margin: 100px auto 15% auto;
+  margin: 100px auto 100px auto;
 }
 
 a {
@@ -157,6 +157,8 @@ header img {
     grid-gap: 10px;
     font-size: 1rem;
     width: 200px;
+    margin: 0 0 50px 0;
+    padding: 0;
   }
 }
 aside {
@@ -200,27 +202,15 @@ aside div a {
   transform: scaleX(1);
 }
 
-@media screen and (max-width: 500px) {
-  .work-box {
-    width: 80%;
-    margin: auto;
-  }
-  .work-box h2 {
-    font-size: 1rem;
-  }
-  .work-box p {
-    display: none;
-  }
-}
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1000px) {
   section {
-    grid-template-columns: auto;
-    margin: 100px 80px 100px 80px;
+    width: 360px;
+    margin: auto;
+    grid-template-columns: 1fr;
   }
 
   .work-box {
-    width: 100%;
-    margin: auto;
+    display: block;
   }
 }
 article#biography {
