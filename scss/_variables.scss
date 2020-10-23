@@ -15,11 +15,10 @@ $accent-colors: (
 }
 
 //MEDIA QUERY
-$breakpoint-desktop: 1000px;
-$breakpoint-small-screen: 700px;
-$breakpoint-mobile: 500px;
+$breakpoints: (desktop: 1000px, tablet: 700px, mobile: 500px);
+$font-size: (desktop: 1.3rem, mobile: 1rem);
 
-@mixin mQ($size) {
+@mixin mQ ($size) {
     @media screen and (max-width: $size) {
         @content;
     }

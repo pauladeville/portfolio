@@ -1,0 +1,32 @@
+article#biography {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10%;
+    div {
+        flex: 2;
+        font-size: 0.9rem;
+        ul {
+            list-style-type: none;
+        }
+        span {
+            color: map-get($accent-colors, green);
+        }
+    }
+    img {
+        flex: 1;
+        margin-left: 20%;
+        display: inline-block;
+        max-width: 250px;
+        height: auto;
+        box-shadow: $shadow-bottom;
+        border-radius: 10px;
+        @include mQ (map-get($breakpoints, desktop)) {
+            margin-bottom: 80px;
+            margin-left: 0px;
+        }
+    }
+    @include mQ (map-get($breakpoints, desktop)) {
+        flex-direction: column-reverse;
+    }
+}
