@@ -52,14 +52,19 @@ a {
   z-index: 5;
   text-align: center;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .work-box h2 {
   font-weight: bold;
   position: relative;
-  padding: 5% 5% 0 5%;
+  margin: 10px;
+  padding: 0 10%;
 }
 .work-box p {
-  padding: 0 5% 5% 5%;
+  padding: 0 10%;
 }
 
 nav {
