@@ -1,3 +1,12 @@
+@mixin menu-letters ($color) {
+    color: $color;
+    font-weight: 700;
+    transition: font-weight 100ms ease-in-out;
+    &:hover {
+        font-weight: 400;
+    }
+}
+
 @mixin link-blur ($color) {
     &:hover {
         position: relative;
@@ -14,10 +23,34 @@
             transform: translate(-50%, -50%);
             background-color: $color;
             border-radius: 50px;
-           filter: blur(20px);
+            filter: blur(20px);
         }
     }    
 }
+
+h1 {
+    font-family: "Jaldi";
+    font-size: 4.2rem;
+    width: 350px;
+    &:active ~ img {
+        transform: translateY(0);
+    }
+    span {
+        margin: -7px;
+        &:nth-child(4n+1) {
+            @include menu-letters (map-get($accent-colors, orange));
+        }
+        &:nth-child(4n+2) {
+            @include menu-letters (map-get($accent-colors, pink));
+        }
+        &:nth-child(4n+3) {
+            @include menu-letters (map-get($accent-colors, blue));
+        }
+        &:nth-child(4n+4) {
+            @include menu-letters (map-get($accent-colors, green));
+        }
+    }
+}    
 
 nav {
     width: 80%;
@@ -25,14 +58,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    h1 {
-        font-family: "Gilbert-Color";
-        font-size: 4rem;
-        line-height: 2.8rem;
-        &:active ~ img {
-            transform: translateY(0);
-        }
-    }    
     ul {
         width: 100%;
         display: grid;
@@ -52,19 +77,6 @@ nav {
                 @include link-blur(map-get($accent-colors, pink))
             }
         }
-    }
-}
-
-header img {
-    transition: transform 100ms ease-in;
-    transform:  translateY(-130px);
-    position: absolute;
-    left: 20px;
-    top: -60px;
-    width: 200px;
-    z-index: 2;
-    @include mQ (map-get($breakpoints, desktop)) {
-        left: 25%;
     }
 }
 

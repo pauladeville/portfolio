@@ -8,12 +8,6 @@ $accent-colors: (
     green: #05CE7C
 );
 
-//POLICES
-@font-face {
-    font-family: "Gilbert-Color";
-    src: url("font/Gilbert-Color.otf");
-}
-
 //MEDIA QUERY
 $breakpoints: (desktop: 1000px, mobile: 500px);
 $font-size: (desktop: 1.3rem, mobile: 1rem);

@@ -1,70 +1,65 @@
-@font-face {
-  font-family: "Gilbert-Color";
-  src: url("font/Gilbert-Color.otf");
-}
 body {
   background-color: #090F29;
   color: #FEFEFF;
   width: 100%;
-  font-family: "Roboto Mono", "Courier New";
+  font-family: "Jaldi", "Courier New";
   margin: 0;
   padding: 0;
-}
-
-section {
-  width: 80%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 80px;
-  margin: 100px auto 100px auto;
+  cursor: crosshair;
 }
 
 a {
   color: #FEFEFF;
   text-decoration: none;
+  cursor: crosshair;
 }
 
-.work-box {
-  box-shadow: -6px 0 transparent, 6px 0 transparent, 0 30px 20px -10px black;
-  transform: scale(1);
-  transition: transform 300ms ease-in-out;
-  position: relative;
+.uppercase {
+  text-transform: uppercase;
 }
-.work-box:hover {
-  transform: scale(1.05);
+
+h1 {
+  font-family: "Jaldi";
+  font-size: 4.2rem;
+  width: 350px;
 }
-.work-box:hover div {
-  opacity: 0.9;
+h1:active ~ img {
+  transform: translateY(0);
 }
-.work-box img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
+h1 span {
+  margin: -7px;
 }
-.work-box div {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #05CE7C;
-  opacity: 0;
-  transition: opacity 300ms ease-in-out;
-  z-index: 5;
-  text-align: center;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+h1 span:nth-child(4n+1) {
+  color: #FF4338;
+  font-weight: 700;
+  transition: font-weight 100ms ease-in-out;
 }
-.work-box h2 {
-  font-weight: bold;
-  position: relative;
-  margin: 10px;
-  padding: 0 10%;
+h1 span:nth-child(4n+1):hover {
+  font-weight: 400;
 }
-.work-box p {
-  padding: 0 10%;
+h1 span:nth-child(4n+2) {
+  color: #DA3AB3;
+  font-weight: 700;
+  transition: font-weight 100ms ease-in-out;
+}
+h1 span:nth-child(4n+2):hover {
+  font-weight: 400;
+}
+h1 span:nth-child(4n+3) {
+  color: #00B3E3;
+  font-weight: 700;
+  transition: font-weight 100ms ease-in-out;
+}
+h1 span:nth-child(4n+3):hover {
+  font-weight: 400;
+}
+h1 span:nth-child(4n+4) {
+  color: #05CE7C;
+  font-weight: 700;
+  transition: font-weight 100ms ease-in-out;
+}
+h1 span:nth-child(4n+4):hover {
+  font-weight: 400;
 }
 
 nav {
@@ -73,14 +68,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-nav h1 {
-  font-family: "Gilbert-Color";
-  font-size: 4rem;
-  line-height: 2.8rem;
-}
-nav h1:active ~ img {
-  transform: translateY(0);
 }
 nav ul {
   width: 100%;
@@ -135,21 +122,6 @@ nav ul li:nth-child(even):hover::before {
   filter: blur(20px);
 }
 
-header img {
-  transition: transform 100ms ease-in;
-  transform: translateY(-130px);
-  position: absolute;
-  left: 20px;
-  top: -60px;
-  width: 200px;
-  z-index: 2;
-}
-@media screen and (max-width: 1000px) {
-  header img {
-    left: 25%;
-  }
-}
-
 @media screen and (max-width: 1000px) {
   nav {
     flex-direction: column;
@@ -166,33 +138,33 @@ header img {
     padding: 0;
   }
 }
-aside {
+footer {
   background: linear-gradient(6deg, #05CE7C 45%, #090F29 45%) no-repeat scroll;
   width: 100%;
   height: 200px;
 }
 @media screen and (max-width: 1000px) {
-  aside {
+  footer {
     background: linear-gradient(6deg, #05CE7C 50%, #090F29 50%) no-repeat scroll;
   }
 }
-aside div {
+footer div {
   position: relative;
   top: 100px;
   padding: 20px;
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
 }
-aside div a {
+footer div a {
   margin: 15px;
+  font-size: 1.2rem;
 }
-
-#mailto {
+footer a[href*=mailto] {
   color: #090F29;
   position: relative;
 }
-#mailto::after {
+footer a[href*=mailto]::after {
   content: "";
   width: 100%;
   height: 2px;
@@ -203,21 +175,17 @@ aside div a {
   transform: scaleX(0);
   transition: transform 200ms ease-in-out;
 }
-#mailto:hover::after {
+footer a[href*=mailto]:hover::after {
   transform: scaleX(1);
 }
-
-@media screen and (max-width: 1000px) {
-  section {
-    width: 360px;
-    margin: auto;
-    grid-template-columns: 1fr;
-  }
-
-  .work-box {
-    display: block;
-  }
+footer .rs-link {
+  transform: rotate(0);
+  transition: transform 300ms ease-in-out;
 }
+footer .rs-link:hover {
+  transform: rotate(20deg);
+}
+
 article#biography {
   display: flex;
   justify-content: space-around;
@@ -255,65 +223,70 @@ article#biography img {
   }
 }
 
-html, body {
-  background-color: #efefef;
+section {
+  width: 80%;
+  margin: 20px auto 100px auto;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 80px;
+}
+
+.work-box {
+  display: inline-block;
+  box-shadow: -6px 0 transparent, 6px 0 transparent, 0 30px 20px -10px black;
   width: 100%;
   height: 100%;
-  padding: 0;
-  margin: 0;
-}
-
-#text {
-  font-family: "Fredoka One", sans-serif;
-  font-size: 6em;
-  line-height: 1em;
-  text-align: center;
+  transform: scale(1);
+  transition: transform 300ms ease-in-out;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 }
-#text:hover {
-  cursor: default;
+.work-box:hover {
+  transform: scale(1.05);
 }
-#text .wrapper {
-  display: inline-block;
-  top: -900px;
-  position: relative;
-  height: 150px;
-  /* default */
-  width: 90px;
-  /* default */
-  transition: ease 0.3s all;
+.work-box:hover div {
+  opacity: 0.9;
 }
-#text .wrapper span {
+.work-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.work-box div {
   position: absolute;
   top: 0;
-  right: 0;
-  transition: ease 0.3s all;
+  height: 100%;
+  width: 100%;
+  background-color: #05CE7C;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+  z-index: 5;
+  text-align: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-#text .wrapper span.letter-2 {
-  color: rgba(0, 0, 255, 0.5);
+.work-box h2 {
+  font-weight: bold;
+  position: relative;
+  margin: 10px;
+  padding: 0 10%;
 }
-#text .wrapper span.letter-1 {
-  color: rgba(255, 0, 0, 0.5);
-  z-index: 1;
-}
-#text .wrapper span.letter-1:hover {
-  top: -3px;
-  right: -3px;
-}
-#text .wrapper span.letter-1:hover ~ .letter-2 {
-  top: 3px;
-  right: 3px;
-}
-#text .wrapper span.space {
-  padding: 0;
-  min-width: 30px;
-  display: inline-block;
+.work-box p {
+  padding: 0 10%;
 }
 
-.uppercase {
-  text-transform: uppercase;
+@media screen and (max-width: 1000px) {
+  section {
+    width: 360px;
+    margin: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .work-box {
+    display: block;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
