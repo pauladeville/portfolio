@@ -4,16 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://aminima.fr">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="style.min.css">
-    <link rel="icon" href="/images/icon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/icon.png">
     <title>Pauline Desmarets</title>
     <meta name="description" content="Pauline Desmarets code des sites légers et fonctionnels, et s'engage pour un développement web résilient et respectueux de la vie privée." />
 </head>
 <body>
     <header>
         <nav>
-            <h1>pauline<br>desmarets</h1>
-            <img src="/images/cat-down.png" alt="Photo de chat qui surgit">
+            <div id="text"></div>
+            <img src="images/cat-down.png" alt="Photo de chat qui surgit">
 
             <ul>
                 <li class="nav_link"><a class="nav_link nav_link--1" href="index.html">Projets web</a></li>
@@ -26,7 +26,7 @@
     <section>
         <div class="work-box">
             <a href="https://pauladeville.github.io/faq-challenge/">
-                <img src="/images/challenge-faq.png" alt="Intégration d'un design de FAQ responsive" >
+                <img src="images/challenge-faq.png" alt="Intégration d'un design de FAQ responsive" >
                 <div>
                     <h2>Affichage en accordéon</h2>
                     <p>Apparition du texte et mise à jour du design en fonction du clic</p>
@@ -35,7 +35,7 @@
         </div>
         <div class="work-box">
             <a href="https://pauladeville.github.io/testimony-challenge/">
-                <img src="/images/challenge-testimony.png" alt="Intégration d'un design de slider dynamique" >
+                <img src="images/challenge-testimony.png" alt="Intégration d'un design de slider dynamique" >
                 <div>
                     <h2>Slider Javascript</h2>
                     <p>Galerie dynamique de texte et photo</p>
@@ -44,7 +44,7 @@
         </div>
         <div class="work-box">
             <a href="https://pauladeville.github.io/landing-page-insurance/">
-                <img src="/images/challenge-insurance.jpg" alt="Intégration d'une page d'accueil responsive" >
+                <img src="images/challenge-insurance.jpg" alt="Intégration d'une page d'accueil responsive" >
                 <div>
                     <h2>Page d'accueil responsive</h2>
                     <p>Menu collapse avec JavaScript</p>
@@ -53,7 +53,7 @@
         </div>
         <div class="work-box">
             <a href="https://pauladeville.github.io/prices-toggle/">
-                <img src="/images/challenge-prices.png" alt="Développement d'un module de prix" >
+                <img src="images/challenge-prices.png" alt="Développement d'un module de prix" >
                 <div>
                     <h2>Affichage alternatif</h2>
                     <p>Toggle prix annuel / mensuel<br>et version mobile</p>
@@ -62,7 +62,7 @@
         </div>
         <div class="work-box">
             <a href="https://pauladeville.github.io/api-meteo/">
-                <img src="/images/api-meteo.png" alt="Application web de météo" >
+                <img src="images/api-meteo.png" alt="Application web de météo" >
                 <div>
                     <h2>Module météo</h2>
                     <p>Appel passé à une API externe avec JavaScript</p>
@@ -71,7 +71,7 @@
         </div>
         <div class="work-box">
             <a href="https://pauladeville.github.io/cv_1_kidblocks/">
-                <img src="/images/cv1.png" alt="CV Bootstrap animé avec CSS" >
+                <img src="images/cv1.png" alt="CV Bootstrap animé avec CSS" >
                 <div>
                     <h2>CV animé</h2>
                     <p>Personnalisation de Bootstrap pour réaliser un design défini sur Figma</p>
@@ -84,12 +84,14 @@
 
     <aside>
         <div>
-            <a href="https://github.com/pauladeville/" target="_blank"><img src="/images/github.png" alt="Logo GitHub"></a>
-            <a href="https://www.linkedin.com/in/paulinedesmarets/" target="_blank"><img src="/images/linkedin.png" alt="Logo Linkedin"></a>
+            <a href="https://github.com/pauladeville/" target="_blank"><img src="images/github.png" alt="Logo GitHub"></a>
+            <a href="https://www.linkedin.com/in/paulinedesmarets/" target="_blank"><img src="images/linkedin.png" alt="Logo Linkedin"></a>
             <a id="mailto" href="mailto:pauline@aminima.fr">pauline@aminima.fr</a>
    
         </div>
     </aside>
+
+    <script src="main.js"></script>
 
 </body>
 </html>
