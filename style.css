@@ -226,7 +226,7 @@ article#biography img {
 
 section {
   width: 80%;
-  margin: 20px auto 100px auto;
+  margin: 80px auto 100px auto;
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 80px;
