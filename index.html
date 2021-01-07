@@ -10,89 +10,96 @@
     <meta name="description" content="Pauline Desmarets code des sites légers et fonctionnels, et s'engage pour un développement web résilient et respectueux de la vie privée." />
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>
-                <span>a</span>
-                <span>m</span>
-                <span>i</span>
-                <span>n</span>
-                <span>i</span>
-                <span>m</span>
-                <span>a</span>
-            </h1>
-            <ul>
-                <li class="nav_link"><a class="nav_link nav_link--1" href="index.html">Projets web</a></li>
-                <li class="nav_link"><a class="nav_link nav_link--2" href="profil.html">A propos</a></li>
-                <li class="nav_link"><a class="nav_link nav_link--3" href="mailto:pauline@aminima.fr">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div id="app">
+        <header>
+            <nav>
+                <h1>
+                    <span>a</span>
+                    <span>m</span>
+                    <span>i</span>
+                    <span>n</span>
+                    <span>i</span>
+                    <span>m</span>
+                    <span>a</span>
+                </h1>
+                <ul>
+                    <li class="nav_link"><a class="nav_link nav_link--1" href="index.html">Projets web</a></li>
+                    <li class="nav_link"><a class="nav_link nav_link--2" href="profil.html">A propos</a></li>
+                    <li class="nav_link"><a class="nav_link nav_link--3" href="mailto:pauline@aminima.fr">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <section>
-        <a class="work-box" href="https://pauladeville.github.io/faq-challenge/">
-            <img src="images/challenge-faq.png" alt="Intégration d'un design de FAQ responsive" >
-            <div>
-                <h2>Affichage en accordéon</h2>
-                <p>Apparition du texte et mise à jour du design en fonction du clic</p>
-            </div>
-        </a>
+        <section>
 
-        <a class="work-box" href="https://pauladeville.github.io/testimony-challenge/">
-            <img src="images/challenge-testimony.png" alt="Intégration d'un design de slider dynamique" >
-            <div>
-                <h2>Slider Javascript</h2>
-                <p>Galerie dynamique de texte et photo</p>
-            </div>
-        </a>
+            <project
+                img_url="images/challenge-faq.png"
+                img_alt="Intégration d'un design de FAQ responsive"
+                project_url="https://pauladeville.github.io/faq-challenge/"
+                description_title="Affichage en accordéon"
+                description_text="Apparition du texte et mise à jour du design en fonction du clic"
+            ></project>
 
-        <a class="work-box" href="https://pauladeville.github.io/meteo-vue-js/">
-            <img src="images/meteo-vuejs.png" alt="App météo dynamique" >
-            <div>
-                <h2>App météo dynamique</h2>
-                <p>Affichage conditionnel des données de l'API avec Vue.js et Vue CLI</p>
-            </div>
-        </a>
+            <project
+                img_url="images/challenge-testimony.png"
+                img_alt="Intégration d'un design de slider dynamique"
+                project_url="https://pauladeville.github.io/testimony-challenge/"
+                description_title="Slider Javascript"
+                description_text="Galerie dynamique de texte et photo"
+            ></project>
 
-        <a class="work-box" href="https://pauladeville.github.io/landing-page-insurance/">
-            <img src="images/challenge-insurance.png" alt="Intégration d'une page d'accueil responsive" >
-            <div>
-                <h2>Page d'accueil responsive</h2>
-                <p>Menu collapse avec JavaScript</p>
-            </div>
-        </a>
+            <project
+                img_url="images/meteo-vuejs.png"
+                img_alt="App météo dynamique"
+                project_url="https://pauladeville.github.io/meteo-vue-js/"
+                description_title="App météo dynamique"
+                description_text="Affichage conditionnel des données de l'API avec Vue.js et Vue CLI"
+            ></project>
 
-        <a class="work-box" href="https://pauladeville.github.io/vuejs-astro/">
-            <img src="images/vuejs-astro.png" alt="Intégration d'une boutique en ligne avec Vue.js" >
-            <div>
-                <h2>Panier d'achats et liste d'envies</h2>
-                <p>Affichage dynamique et animations avec Vue.js</p>
-            </div>
-        </a>
-        <a class="work-box" href="https://pauladeville.github.io/prices-toggle/">
-            <img src="images/challenge-prices.png" alt="Développement d'un module de prix" >
-            <div>
-                <h2>Affichage alternatif</h2>
-                <p>Toggle prix annuel / mensuel<br>et version mobile</p>
-            </div>
-        </a>
-        <a class="work-box" href="https://pauladeville.github.io/cv_1_kidblocks/">
-            <img src="images/cv1.png" alt="CV Bootstrap animé avec CSS" >
-            <div>
-                <h2>CV animé</h2>
-                <p>Personnalisation de Bootstrap pour réaliser un design défini sur Figma</p>
-            </div>
-        </a>
-    </section>
+            <project
+                img_url="images/challenge-insurance.png"
+                img_alt="Intégration d'une page d'accueil responsive"
+                project_url="https://pauladeville.github.io/landing-page-insurance/"
+                description_title="Page d'accueil responsive"
+                description_text="Menu collapse avec JavaScript"
+            ></project>
 
-    <footer>
-        <div>
-            <a href="https://github.com/pauladeville/" class="rs-link" target="_blank"><img src="images/github.png" alt="Logo GitHub"></a>
-            <a href="https://www.linkedin.com/in/paulinedesmarets/" class="rs-link" target="_blank"><img src="images/linkedin.png" alt="Logo Linkedin"></a>
-            <a id="mailto" href="mailto:pauline@aminima.fr">pauline@aminima.fr</a>
-   
-        </div>
-    </footer>
+            <project
+                img_url="images/vuejs-astro.png"
+                img_alt="Intégration d'une boutique en ligne avec Vue.js"
+                project_url="https://pauladeville.github.io/vuejs-astro/"
+                description_title="Panier d'achats et liste d'envies"
+                description_text="Affichage dynamique et animations avec Vue.js"
+            ></project>
 
+            <project
+                img_url="images/challenge-prices.png"
+                img_alt="Développement d'un module d'affichage de prix"
+                project_url="https://pauladeville.github.io/prices-toggle/"
+                description_title="Affichage alternatif"
+                description_text="Toggle prix annuel / mensuel et version mobile"
+            ></project>
+
+            <project
+                img_url="images/cv1.png"
+                img_alt="CV Bootstrap animé avec CSS"
+                project_url="https://pauladeville.github.io/cv_1_kidblocks/"
+                description_title="CV animé"
+                description_text="Personnalisation de Bootstrap pour réaliser un design défini sur Figma"
+            ></project>
+
+        </section>
+
+        <footer>
+            <div>
+                <a href="https://github.com/pauladeville/" class="rs-link" target="_blank"><img src="images/github.png" alt="Logo GitHub"></a>
+                <a href="https://www.linkedin.com/in/paulinedesmarets/" class="rs-link" target="_blank"><img src="images/linkedin.png" alt="Logo Linkedin"></a>
+                <a id="mailto" href="mailto:pauline@aminima.fr">pauline@aminima.fr</a>
+    
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

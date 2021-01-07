@@ -1,14 +1,15 @@
 footer {
-    background: linear-gradient(6deg, map-get($accent-colors, green) 45%, $background-color 45%) no-repeat scroll;
+    background-image: url(../../images/waves.svg);
+    background-size: cover;
     width: 100%;
-    height: 200px;
+    height: 350px;
     @include mQ(map-get($breakpoints, desktop)) {
         background: linear-gradient(6deg, map-get($accent-colors, green) 50%, $background-color 50%) no-repeat scroll;
     }
     div {
         position: relative;
-        top: 100px;
-        padding: 20px;
+        bottom: -230px;
+        padding-left: 80px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
