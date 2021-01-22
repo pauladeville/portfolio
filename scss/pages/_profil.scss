@@ -12,6 +12,30 @@ article#biography {
         span {
             color: map-get($accent-colors, green);
         }
+        .overline {
+            display: inline;
+            position: relative;
+            a {
+                z-index: 1;
+                position: relative;
+                cursor: pointer;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                left: -0.1px;
+                right: -0.1px;
+                bottom: 13px;
+                height: 65%;
+                transform: scaleY(.1);
+                transition: transform .1s ease-in-out;
+                transform-origin: bottom;
+                background-color: map-get($accent-colors, green);
+            }
+            &:hover::after {
+                transform: scaleY(1);
+            }
+        }
     }
     img {
         flex: 1;
