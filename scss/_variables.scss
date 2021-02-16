@@ -9,7 +9,7 @@ $accent-colors: (
 );
 
 //MEDIA QUERY
-$breakpoints: (desktop: 1000px, mobile: 500px);
+$breakpoints: (desktop: 1000px, tablet: 700px, mobile: 500px);
 $font-size: (desktop: 1.3rem, mobile: 1rem);
 
 @mixin mQ ($size) {

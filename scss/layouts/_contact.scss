@@ -1,48 +1,116 @@
-footer {
-    background-image: url(../../images/waves.svg);
-    background-size: cover;
-    width: 100%;
-    height: 350px;
-    @include mQ(map-get($breakpoints, desktop)) {
-        background: linear-gradient(6deg, map-get($accent-colors, green) 50%, $background-color 50%) no-repeat scroll;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    @include mQ(map-get($breakpoints, mobile)) {
+        width: 250px;
+        margin: auto;
     }
-    div {
+    label {
+      display: block;
+      font-size: map-get($font-size, desktop);
+    }
+    .form-group {
+      position: relative;
+      padding: 20px 0 0;
+      margin: 20px 0;
+      width: 100%;
+      max-width: 400px;
+    }
+    .form-field {
+      width: 100%;
+      border: 0;
+      border-bottom: 2px solid darken(map-get($accent-colors, pink), 15);
+      outline: 0;
+      padding: 7px 0;
+      background: transparent;
+      font-weight: bold;
+      color: $font-color;
+      transition: border-color 0.2s;
+      &::placeholder {
+        color: transparent;
+      }
+      &:placeholder-shown ~ .form-label {
+        cursor: text;
+        top: 20px;
+      }
+    }
+    .form-label {
+      position: absolute;
+      top: -10px;
+      transition: 0.2s;
+      color: $font-color;
+    }
+    .form-field:focus {
+      & ~ .form-label {
+        position: absolute;
+        top: -10px;
+        transition: 0.2s;
+        color: map-get($accent-colors, pink);
+        font-weight: bold;
+      }
+      padding-bottom: 6px;
+      border-width: 3px;
+    }
+    .form-field {
+      &:required,
+      &:invalid {
+        box-shadow: none;
+      }
+    }
+    .textarea-label {
+        color: $font-color;
+        margin: 45px 0 15px 0;
+        width: 400px;
+        &:focus-within {
+            font-weight: bold;
+            color: map-get($accent-colors, pink);
+        }
+        @include mQ(map-get($breakpoints, mobile)) {
+            width: 250px;
+            overflow: hidden;
+        }
+    
+    }
+    .textarea-field {
+      padding: 15px;
+      margin-top: 20px;
+      border: 0;
+      outline: 0;
+      background-color: lighten(map-get($accent-colors, pink), 80);
+    }
+    div.form-button {
         position: relative;
-        bottom: -230px;
-        padding-left: 80px;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        a {
-            margin: 15px;
-            font-size: 1.2rem;
-        }
+        margin: 50px 0;
     }
-    a[href*="mailto"] {
-        color: $background-color;
-        position: relative;
-        &::after {
-            content: "";
-            width: 100%;
-            height: 2px;
-            background-color: $background-color;
-            position: absolute;
-            top: 100%;
-            right: 0;
-            transform: scaleX(0);
-            transition: transform 200ms ease-in-out
-        }
-        &:hover::after {
-            transform: scaleX(1);
-        }
+    #send-form {
+        position: absolute;
+        top: 0;
+        padding: 0 20px;
+        border: 0;
+        width: 250px;
+        height: 50px;
+        cursor: pointer;
+        background: none;
+        color: $font-color;
+        font-size: map-get($font-size, desktop);
     }
-    .rs-link {
-        transform: rotate(0);
-        transition: transform 300ms ease-in-out;
-        &:hover {
-            transform: rotate(20deg);
-        }
+    div.blur {
+        width: 250px;
+        height: 50px;
+        background-color: map-get($accent-colors, pink);
+        border-radius: 50px;
+        filter: blur(20px);
+
     }
 }
 
-
+div.merci-bloc {
+    width: 90%;
+    margin: 150px auto;
+    text-align: center;
+    h1 {
+        display: inline;
+    }
+}
